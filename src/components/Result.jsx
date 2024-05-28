@@ -8,7 +8,6 @@ export default function Result({annualData}){
         totalInterest += data.interest;
         content.push(<YearlyReturn data={data} totalInterest={totalInterest}></YearlyReturn>);
     }
-    let error = false;
     return (
         <table id="result">
             <thead>
@@ -18,6 +17,7 @@ export default function Result({annualData}){
                 <td>Total Interest</td>
                 <td>Invested Capital</td>
             </thead>
+            {content}
         </table>
     );
 }
